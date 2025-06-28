@@ -4,7 +4,7 @@ import Card from "./component/Card";
 
 function App() {
   return (
-    <main className="flex flex-col w-screen items-center justify-center min-h-screen bg-gray-100 text-[#372D85]">
+    <main className="flex flex-col w-screen items-center md:justify-center min-h-screen bg-gray-100 text-[#372D85]">
       <section className="grid md:grid-cols-2 md:max-w-3xl bg-white rounded-2xl shadow-lg">
         <div className="bg-[linear-gradient(to_bottom,_#9C4DFF_0%,_#4636E3_45%,_#4636E3_100%)] rounded-b-2xl md:rounded-2xl flex flex-col justify-evenly items-center gap-6 w-full p-6 text-white">
           <p className="text-[#f6faff] text-center text-xl">Your Result</p>
@@ -34,7 +34,7 @@ function App() {
               bgCol={summary.bgCol}
             />
           ))}
-          <button className="bg-[linear-gradient(to_bottom,_#9C4DFF_0%,_#4636E3_45%,_#4636E3_100%)] text-white rounded-ee-full py-3 px-6 font-bold text-lg">
+          <button className="bg-[#303b5a] md:bg-[linear-gradient(to_bottom,_#9C4DFF_0%,_#4636E3_45%,_#4636E3_100%)] text-white rounded-ee-full py-3 px-6 font-bold text-lg">
             Continue
           </button>
         </div>

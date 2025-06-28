@@ -30,7 +30,8 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./screenshot1.png)
+![](./screenshot2.png)
 
 Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
 
@@ -55,7 +56,7 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - CSS Grid
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
-- [Styled Components](https://styled-components.com/) - For styles
+- [tailwindcss](https://tailwindcss.com/) - For styles
 
 **Note: These are just examples. Delete this note and replace the list above with your own choices**
 
@@ -66,19 +67,47 @@ Use this section to recap over some of your major learnings while working throug
 To see how you can add code snippets, see below:
 
 ```html
-<h1>Some HTML code I'm proud of</h1>
+div
+      className="flex justify-between items-center p-4 rounded-lg"
+      style={{ backgroundColor: bgCol, color }}
+    >
+      <div className="flex items-center gap-4">
+        <img src={icon} alt="" />
+        <p
+          style={{
+            color,
+          }}
+        >
+          {category}
+        </p>
+      </div>
+
+      <p>
+        <span> {score}</span>/100
+      </p>
+    </div>
 ```
 
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+@import "tailwindcss";
+#root {
+  margin: 0 auto;
+  padding: 0;
 }
 ```
 
 ```js
-const proudOfThisFunc = () => {
-  console.log("🎉");
-};
+{
+  summary.map((summary) => (
+    <Card
+      category={summary.category}
+      icon={summary.icon}
+      score={summary.score}
+      color={summary.color}
+      bgCol={summary.bgCol}
+    />
+  ));
+}
 ```
 
 If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
@@ -87,27 +116,28 @@ If you want more help with writing markdown, we'd recommend checking out [The Ma
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+I'd like to use shadcn and other css component library and animation libraries like parce and framer motion
 
 **Note: Delete this note and the content within this section and replace with your own plans for continued development.**
 
 ### Useful resources
 
-- [vite](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
+- [vite](https://vite.dev/) - This tool helped me initate my react app. I really liked this pattern and will use it going forward.
 - [tailwindcss](https://tailwindcss.com/) - This is an amazing article which helped me finally understand tailwind gradient concepts. I'd recommend it to anyone still learning this concept.
 
 **Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Frontend Mentor - [@Abdul-luh
+  ](https://www.frontendmentor.io/profile/Abdul-luh)
 
 **Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
 
 ## Acknowledgments
 
 This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
+
+Me my self and I
 
 **Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
